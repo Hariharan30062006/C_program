@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+char diamond=4,heart=3,n=1;
+while(n!=0){
+printf("%c %c",heart,diamond);
+}
+return 0;
+}
