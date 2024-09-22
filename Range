@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+    int n;
+    printf("Number of elements: ");
+    scanf("%d",&n);
+    int marks[n]; 
+    int i,range;
+    for(i=1;i<=n;i++){
+        printf("Give the %d elements: ",i);
+        scanf("%d",&marks[i]);
+    } 
+    int min=marks[1],max=marks[1];
+    for(i=1;i<=n;i++){
+        if(marks[i]>max)
+           max=marks[i];
+    }
+    printf("The Large number is: %d\n",max);
+    for(i=1;i<=n;i++){
+        if(marks[i]<min)
+           min=marks[i];
+    }
+    printf("The Small number is: %d\n",min);
+
+    range=max-min;
+    printf("The Range of the following is: %d",range);
+     return 0;
+}
