@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+    int marks[40][5],i,j,n,sum,average,min=500,max=0;
+    printf("no of students: ");
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        sum=0;
+    for(j=0;j<5;j++){
+        printf("enter the marks: ");
+        scanf("%d",&marks[i][j]);
+        sum=sum+marks[i][j];
+        average=sum/5;
+    }
+        printf("the marks of %d student is: %d",i+1,sum);
+        printf("\nthe average of %d student is: %d",i+1,average);
+    
+    if(sum>max){
+        max=sum;
+    }if(sum<min){
+        min=sum;
+    }
+        printf("\n");
+    }
+    printf("\nthe maximum marks is obtained by %d student is: %d ",i,max);
+    printf("\nthe minimum marks is obtained by %d student is: %d ",i,min);
+    
+ return 0;   
+}
