@@ -1,0 +1,98 @@
+#include<stdio.h>
+int main(){
+    int m,n,i,j,o,p,a;
+    printf("elements in 1st array: ");
+    scanf("%d",&m);
+    printf("elements in 2nd array: ");
+    scanf("%d",&n);
+    int arr1[m],arr2[n],k,s,arr[m],h,max[m],min[m];
+   
+    // checking the elements
+   
+    if(m==n){
+       printf("same no of elements\n");
+    }else{
+        printf("Give equal number of elements\n");
+        goto label;
+    }
+   
+    //input of elements in 1st array
+   
+    for(i=1;i<=m;i++){
+        printf("enter the %d number in array 1: ",i);
+        scanf("%d",&arr1[i]);
+    }
+    
+    printf("\n\n");
+   
+    //input of elements in 2nd array
+   
+    for(j=1;j<=m;j++){
+       printf("enter the %d number in array 2: ",j);
+        scanf("%d",&arr2[j]);
+    }
+     
+    printf("\n");
+    //printing 1st array
+   
+    printf("the 1st array is:{");
+    for(k=1;k<=m;k++){
+        printf("%d,",arr1[k]);
+    }
+    printf("}\n");
+   
+    // printing 2nd array
+   
+    printf("the 2nd array is:{");  
+    for(k=1;k<=m;k++){
+        printf("%d,",arr2[k]);
+    }
+    printf("}\n");
+   
+   printf("\n");
+   
+    //sum of arrays
+    
+    for(s=1;s<=m;s++){
+          arr[s]=arr1[s]+arr2[s];
+    }
+    printf("The sum of the array is:{");
+    for(j=1;j<=m;j++){
+    printf("%d,",arr[j]);
+    }
+    printf("}\n");
+   
+    //max array
+   
+    for(h=1;h<=m;h++){
+        if(arr1[h]>arr2[h]){
+          max[h]=arr1[h];
+        }else{
+            max[h]=arr2[h];
+         }
+        if(arr1[h]<arr2[h]){
+          min[h]=arr1[h];
+        }else{
+            min[h]=arr2[h];
+        }
+    }
+   
+    //printing max
+   
+    printf("The max of the array is:{");
+    for(j=1;j<=m;j++){
+    printf("%d,",max[j]);
+    }
+    printf("}\n");
+   
+    //printing min
+   
+    printf("The min of the array is:{");
+    for(k=1;k<=m;k++){
+    printf("%d,",min[k]);
+    }
+    printf("}\n");
+   
+    label:
+    return 0;
+}
