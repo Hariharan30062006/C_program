@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+    int m,n,i,j,diaganolsum=0;
+    printf("no of rows:");
+    scanf("%d",&m);
+    printf("no of column:");
+    scanf("%d",&n);
+    if(m!=n){
+        printf("give same rows and column");
+        return 1;
+    }else{
+        printf("row and column are equal\n");
+    }
+    int matrix[m][n];
+    for(i=1;i<=m;i++){
+        for(j=1;j<=n;j++){
+        printf("the elements [%d][%d] is: ",i,j);
+        scanf("%d",&matrix[i][j]);
+        if(i==j){
+            diaganolsum=diaganolsum+matrix[i][j];
+        }
+    }}
+    printf("The diaganolsum is: %d",diaganolsum);
+
+    
+    return 0;
+}
